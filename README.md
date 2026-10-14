@@ -16,6 +16,7 @@
 - `dati/hbsc_lapai.csv` – harmonizēti HBSC rādītāji pēc SPKC 14 veselības jomām (2002–2022; 11, 13, 15 g.; meitenes/zēni/kopā; Latvija, HBSC vidējais, 7 valstu vidējais).
 - `dati/mutes_veseliba.csv`, `dati/mutes_veseliba.md` – skolēnu mutes veselība (SPKC, 2016 un 2023).
 - `dati/terminu_saskanosana.md` – lapā lietoto terminu atbilstība SPKC un CSP oficiālajiem terminiem.
+- `dati/veselibas_macibas_salidzinajums.csv`, `.md` – veselības mācības organizācija 18 Eiropas valstīs salīdzinājumā ar Latviju.
 - `dati/stundu_skaits_veseliba.md` – veselības tēmām skolā atvēlētais laiks (MK noteikumi Nr. 747, VISC programmas paraugi).
 
 ## Rādītāji
