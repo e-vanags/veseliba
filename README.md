@@ -1,6 +1,6 @@
 # Bērnu un pusaudžu veselība un veselības izglītība Latvijā
 
-Šī interaktīvā vizualizācija rāda Latvijas bērnu un pusaudžu veselības rādītājus (garīgā veselība, ņirgāšanās, uzturs, miegs, fiziskā aktivitāte, liekais svars, atkarības, reproduktīvā veselība), veselības izglītībai skolā atvēlēto laiku un veselības izglītības politikas posmus.
+Šī interaktīvā vizualizācija rāda Latvijas bērnu un pusaudžu veselības rādītājus (psihiskā veselība, ņirgāšanās, uzturs, miegs, fiziskā aktivitāte, liekais svars, atkarības, reproduktīvā veselība), veselības izglītībai skolā atvēlēto laiku un veselības izglītības politikas posmus.
 
 **Skatīt:** atveriet `index.html` pārlūkā vai GitHub Pages adresē.
 
