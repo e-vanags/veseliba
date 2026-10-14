@@ -13,6 +13,8 @@
 - `dati/veselibas_izglitibas_hronologija.md` – piezīmes par hronoloģiju.
 - `dati/berni_pusaudzi_veseliba.csv` – bērnu un pusaudžu veselības rādītāji (HBSC, COSI, ESPAD, GYTS, PISA, Eurostat), tajā pašā formātā.
 - `dati/berni_pusaudzi_veseliba.md` – definīcijas, avoti, iztrūkumi.
+- `dati/mutes_veseliba.csv`, `dati/mutes_veseliba.md` – skolēnu mutes veselība (SPKC, 2016 un 2023).
+- `dati/terminu_saskanosana.md` – lapā lietoto terminu atbilstība SPKC un CSP oficiālajiem terminiem.
 - `dati/stundu_skaits_veseliba.md` – veselības tēmām skolā atvēlētais laiks (MK noteikumi Nr. 747, VISC programmas paraugi).
 
 ## Rādītāji
@@ -27,7 +29,8 @@
 | CPV vakcinācija | WHO, SPKC | 2010–2025 |
 | Ņirgāšanās, veselības sūdzības, nervozitāte, pašvērtētā veselība, vientulība | HBSC | 2002–2022 |
 | Brokastis, augļi, fiziskā aktivitāte, miegs, zobu tīrīšana | HBSC | 2002–2022 |
-| Liekais svars un aptaukošanās | HBSC; PVO COSI (mērīts) | 2002–2024 |
+| Kariess, KPE indekss, sīlanti (12 un 15 g.) | SPKC mutes veselības pētījums | 2016, 2023 |
+| Lieka ķermeņa masa un aptaukošanās | HBSC; PVO COSI (mērīts) | 2002–2024 |
 | E-cigaretes, smēķēšana, alkohols, azartspēles, sociālie tīkli | HBSC, ESPAD, GYTS | 1995–2024 |
 
 ## Ierobežojumi
