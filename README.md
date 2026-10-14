@@ -1,6 +1,6 @@
-# Pusaudžu reproduktīvā veselība un veselības izglītība Latvijā
+# Bērnu un pusaudžu veselība un veselības izglītība Latvijā
 
-Šī interaktīvā vizualizācija rāda Latvijas pusaudžu seksuālās un reproduktīvās veselības rādītājus no 2000. līdz 2025. gadam. Tie attēloti kopā ar to, kā veselības izglītība laika gaitā organizēta skolās un kādi politikas lēmumi pieņemti.
+Šī interaktīvā vizualizācija rāda Latvijas bērnu un pusaudžu veselības rādītājus (garīgā veselība, ņirgāšanās, uzturs, miegs, fiziskā aktivitāte, liekais svars, atkarības, reproduktīvā veselība), veselības izglītībai skolā atvēlēto laiku un veselības izglītības politikas posmus.
 
 **Skatīt:** atveriet `index.html` pārlūkā vai GitHub Pages adresē.
 
@@ -11,6 +11,9 @@
 - `dati/pusauzu_reproduktiva_veseliba.md` – datu definīcijas, avoti un iztrūkumi.
 - `dati/veselibas_izglitibas_hronologija.csv` – 52 veselības izglītības politikas notikumi (1992–2026) ar avotiem un ticamības novērtējumu.
 - `dati/veselibas_izglitibas_hronologija.md` – piezīmes par hronoloģiju.
+- `dati/berni_pusaudzi_veseliba.csv` – bērnu un pusaudžu veselības rādītāji (HBSC, COSI, ESPAD, GYTS, PISA, Eurostat), tajā pašā formātā.
+- `dati/berni_pusaudzi_veseliba.md` – definīcijas, avoti, iztrūkumi.
+- `dati/stundu_skaits_veseliba.md` – veselības tēmām skolā atvēlētais laiks (MK noteikumi Nr. 747, VISC programmas paraugi).
 
 ## Rādītāji
 
@@ -22,6 +25,10 @@
 | Sifiliss, gonoreja, hlamīdijas (15–24 g.) | ECDC, SPKC | 2000–2024 |
 | HIV jaunie gadījumi (15–24 g.) | SPKC | 2014–2024 |
 | CPV vakcinācija | WHO, SPKC | 2010–2025 |
+| Ņirgāšanās, veselības sūdzības, nervozitāte, pašvērtētā veselība, vientulība | HBSC | 2002–2022 |
+| Brokastis, augļi, fiziskā aktivitāte, miegs, zobu tīrīšana | HBSC | 2002–2022 |
+| Liekais svars un aptaukošanās | HBSC; PVO COSI (mērīts) | 2002–2024 |
+| E-cigaretes, smēķēšana, alkohols, azartspēles, sociālie tīkli | HBSC, ESPAD, GYTS | 1995–2024 |
 
 ## Ierobežojumi
 

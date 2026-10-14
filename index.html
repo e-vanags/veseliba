@@ -3,8 +3,8 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Pusaudžu reproduktīvā veselība un veselības izglītība Latvijā</title>
-<meta name="description" content="Latvijas pusaudžu reproduktīvās veselības rādītāji 2000–2025 uz veselības izglītības politikas posmu fona.">
+<title>Bērnu un pusaudžu veselība un veselības izglītība Latvijā</title>
+<meta name="description" content="Latvijas bērnu un pusaudžu veselības rādītāji, veselības izglītībai skolā atvēlētais laiks un politikas posmi.">
 <style>
 :root{
   --bg:#fcfcfb;--surface:#ffffff;--ink:#0b0b0b;--ink2:#52514e;--muted:#898781;
@@ -46,13 +46,65 @@ ol.ev b{color:var(--ink);font-weight:600;min-width:70px}
 .src li{margin-bottom:4px}
 a{color:var(--accent)}
 footer{margin-top:32px;font-size:12px;color:var(--muted)}
+.kpis{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:12px;margin:0 0 8px}
+.kpi{background:var(--surface);border:1px solid var(--border);border-radius:12px;padding:12px 14px}
+.kpi .v{font-size:26px;font-weight:600;line-height:1.2}
+.kpi .v small{font-size:14px;font-weight:400;color:var(--muted)}
+.kpi .l{font-size:13px;color:var(--ink2)}
+.kpi .s{font-size:11px;color:var(--muted);margin-top:4px}
+table.t{width:100%;border-collapse:collapse;font-size:14px}
+table.t th,table.t td{text-align:left;padding:8px 6px;border-bottom:1px solid var(--border);vertical-align:top}
+table.t th{font-weight:600;color:var(--ink2);font-size:13px}
+.tw{overflow-x:auto}
 @media (max-width:600px){.chartbox{height:300px}h1{font-size:22px}}
 </style>
 </head>
 <body>
 <main>
-<h1>Pusaudžu reproduktīvā veselība un veselības izglītība Latvijā</h1>
-<p class="lead">Latvijas pusaudžu seksuālās un reproduktīvās veselības rādītāji (2000–2025) uz veselības izglītības politikas posmu un lēmumu fona. Izvēlieties rādītāju; fona krāsas rāda, kā veselības izglītība tika organizēta skolās, numurētās līnijas – galvenos politikas notikumus.</p>
+<h1>Bērnu un pusaudžu veselība un veselības izglītība Latvijā</h1>
+<p class="lead">Kādas veselības problēmas ir Latvijas bērniem un pusaudžiem, cik laika veselības izglītībai atvēlēts skolā un kā tā laika gaitā mainījusies. Dati: HBSC, PVO COSI, ESPAD, GYTS, Eurostat, ECDC, SPKC.</p>
+
+<h2>Galvenās problēmas (HBSC 2022, ja nav norādīts citādi)</h2>
+<div class="kpis">
+  <div class="kpi"><div class="v">23 % <small>pret 12 %</small></div><div class="l">13 g. meiteņu cietušas no ņirgāšanās skolā</div><div class="s">Latvija ~2× virs HBSC vidējā visos mērījumos kopš 2002</div></div>
+  <div class="kpi"><div class="v">8 % <small>pret 23 %</small></div><div class="l">15 g. meiteņu savu veselību vērtē kā teicamu</div><div class="s">HBSC vidējais 23 %</div></div>
+  <div class="kpi"><div class="v">72 %</div><div class="l">15 g. meiteņu ≥2 veselības sūdzības katru nedēļu</div><div class="s">2018: 58 %; HBSC vidējais 66 %</div></div>
+  <div class="kpi"><div class="v">55 %</div><div class="l">13 g. meiteņu nervozas vairāk nekā reizi nedēļā</div><div class="s">2014: 24 %; HBSC vidējais 45 %</div></div>
+  <div class="kpi"><div class="v">36 % <small>pret 28 %</small></div><div class="l">15 g. meiteņu vientuļas lielāko laika daļu vai vienmēr</div><div class="s">zēniem 20 % pret 13 %</div></div>
+  <div class="kpi"><div class="v">~1/3</div><div class="l">15 g. meiteņu skolas dienās guļ ieteikto laiku</div><div class="s">meitenes 33 %, zēni 41 %</div></div>
+  <div class="kpi"><div class="v">39 %</div><div class="l">13 g. meiteņu brokasto katru skolas dienu</div><div class="s">2002: 72 %</div></div>
+  <div class="kpi"><div class="v">16 % <small>pret 34 %</small></div><div class="l">15 g. meiteņu ēd augļus katru dienu</div><div class="s">HBSC vidējais 34 %</div></div>
+  <div class="kpi"><div class="v">31 % <small>pret 20 %</small></div><div class="l">15 g. meiteņu lietojušas e-cigaretes pēdējās 30 dienās</div><div class="s">GYTS 13–15 g.: 9 % (2011) → 22 % (2024)</div></div>
+  <div class="kpi"><div class="v">30 %</div><div class="l">9 g. zēnu ar lieko svaru (mērīts), t. sk. 15 % aptaukošanās</div><div class="s">PVO COSI 2022/23</div></div>
+  <div class="kpi"><div class="v">41 % <small>pret 55 %</small></div><div class="l">15 g. zēnu tīra zobus vairāk nekā reizi dienā</div><div class="s">HBSC 2018</div></div>
+  <div class="kpi"><div class="v">61–65 %</div><div class="l">seksuāli aktīvo 15 g. lietoja prezervatīvu</div><div class="s">2010: 77–84 %</div></div>
+</div>
+<p class="note">Ne visi rādītāji ir slikti: alkohola lietošana, saldināto dzērienu patēriņš un pusaudžu (15–19 g.) pašnāvību rādītājs pēdējos gados ir HBSC/ES vidējā līmenī vai zemāk; agrīna dzimumdzīves uzsākšana un pusaudžu dzemdības ir ievērojami samazinājušās.</p>
+
+<h2>Veselības rādītāji laikā</h2>
+<div class="card">
+  <div class="pills" id="pills2" role="tablist" aria-label="Veselības rādītāji"></div>
+  <div class="legend" id="legend2"></div>
+  <div class="chartbox"><canvas id="c2" role="img" aria-label="Izvēlētā veselības rādītāja laika rinda: Latvija pret starptautisko vidējo">Bērnu un pusaudžu veselības rādītāji.</canvas></div>
+  <p class="note" id="note2"></p>
+</div>
+
+<h2>Cik laika veselībai atvēlēts skolā</h2>
+<div class="card tw">
+<table class="t">
+<tr><th>Klases</th><th>Priekšmets</th><th>Stundas</th><th>Veselības saturs</th></tr>
+<tr><td>1.–3., 7.–9.</td><td>Sociālās zinības</td><td>1 st./nedēļā (~35 st. gadā)</td><td rowspan="2">VISC programmas paraugā skaidri veselībai veltīta viena tēma – "Kā vadīt stresu?" 7. klasē (8–10 st.), t. i., ~2 % no 454 sociālo zinību stundām 1.–9. klasē. Pārējās stundās – pilsoniskā izglītība, ekonomika, ētika, vēsture.</td></tr>
+<tr><td>4.–6.</td><td>Sociālās zinības un vēsture</td><td>245 st. trijos gados</td></tr>
+<tr><td>1.–9.</td><td>Sports un veselība</td><td>2–3 st./nedēļā</td><td>Galvenokārt fiziskās aktivitātes</td></tr>
+<tr><td>1.–9.</td><td>Dabaszinības, bioloģija</td><td>—</td><td>Ķermenis, pubertāte, reproduktīvā veselība – bez atsevišķi noteikta stundu skaita</td></tr>
+<tr><td>10.–12.</td><td>—</td><td>—</td><td>Atsevišķa veselības kursa nav (izvēles "Veselības mācība" izzuda ar Skola2030)</td></tr>
+<tr><td>1.–9.</td><td>Klases stundas</td><td>ārpus obligātās slodzes</td><td>Veselība minēta kā iespējama tēma</td></tr>
+</table>
+<p class="note">Valdība 06.10.2026 atbalstīja "ģimenes vērtību un veselībpratības" moduli, ko paredzēts iekļaut esošajās sociālo zinību programmās 1.–9. klasei <strong>bez papildu stundām</strong> un bez standarta maiņas (ieviešana no 01.09.2027). Avoti: MK noteikumi Nr. 747 (11. pielikums), VISC sociālo zinību programmas paraugs (2019), TAP portāls 26-TA-2353.</p>
+</div>
+
+<h2>Reproduktīvā veselība un veselības izglītības posmi</h2>
+<p class="lead">Izvēlieties rādītāju; fona krāsas rāda, kā veselības izglītība tika organizēta skolās, numurētās līnijas – galvenos politikas notikumus.</p>
 
 <div class="card">
   <div class="pills" id="pills" role="tablist" aria-label="Rādītāji"></div>
@@ -61,7 +113,7 @@ footer{margin-top:32px;font-size:12px;color:var(--muted)}
   <div class="bands">
     <span><span class="sw" style="background:var(--band1)"></span>Atsevišķs priekšmets "Veselības mācība" (1995–2005)</span>
     <span><span class="sw" style="background:var(--band2)"></span>Integrēta "Sociālajās zinībās" (2005–2020)</span>
-    <span><span class="sw" style="background:var(--band3)"></span>Skola2030 (no 2020)</span>
+    <span><span class="sw" style="background:var(--band3)"></span>Skola2030 – pakāpeniska ieviešana 2020/21–2022/23</span>
   </div>
   <p class="note" id="note"></p>
 </div>
@@ -78,11 +130,13 @@ footer{margin-top:32px;font-size:12px;color:var(--muted)}
   <li><strong>Aborti 15–19 g.</strong> – koeficients aprēķināts no abortu skaita un iedzīvotāju skaita (nav oficiāls rādītājs). Eurostat 2019. g. vecuma dati ir kļūdaini, tādēļ izmantoti CSP/SPKC dati.</li>
   <li><strong>Hlamīdijas</strong> – ziņošanas pārrāvums ap 2009. g.; kāpums atspoguļo testēšanas un ziņošanas izmaiņas.</li>
   <li><strong>STI</strong> – daļa vecuma grupas skaitļu atvasināta no ECDC vecuma sadalījuma.</li>
+  <li><strong>Veselības rādītāji</strong> – HBSC dati ik 4 gadus (11, 13, 15 g., pašu ziņoti); liekā svara definīcija mainīta 2014. g. (salīdzināmi tikai 2014–2022); COSI – mērīts svars un augums 7–9 g. bērniem, starptautiskais vidējais aprēķināts dažādām valstu kopām.</li>
   <li><strong>Politikas posmi</strong> – 1995–2005 gadu datējums balstās vienā avotā; 2005–2020 pamatskolā atsevišķa priekšmeta nav, vidusskolā bija izvēles kurss (2008–2022).</li>
 </ul>
 
 <h2>Avoti</h2>
 <ul class="src">
+  <li>PVO COSI (Childhood Obesity Surveillance Initiative); ESPAD 2024; GYTS (Global Youth Tobacco Survey)</li>
   <li>SPKC, Latvijas skolēnu veselības paradumu pētījums (HBSC) – <a href="https://www.spkc.gov.lv/lv/petijumi">spkc.gov.lv</a>; WHO Europe HBSC starptautiskie ziņojumi – <a href="https://hbsc.org">hbsc.org</a></li>
   <li>Eurostat: demo_frate (dzimstība pēc mātes vecuma), demo_fabort (aborti) – <a href="https://ec.europa.eu/eurostat">ec.europa.eu/eurostat</a></li>
   <li>CSP datubāze – <a href="https://data.stat.gov.lv">data.stat.gov.lv</a></li>
@@ -110,7 +164,7 @@ const V=[
 {k:'HIV jaunie gadījumi',u:'gadījumu skaits',s:[['hiv2024','20–24 g.',B],['hiv1519','15–19 g.',O]],n:'SPKC; salīdzināmi dati tikai no 2014. g.'},
 {k:'CPV vakcinācija',u:'% 12 g. bērnu (1. deva)',s:[['hpv_f','Meitenes',O],['hpv_m','Zēni',B]],n:'WHO/SPKC: saņemta vismaz 1. deva 12 g. vecumā. Valsts apmaksāta vakcinācija meitenēm no 2010. g., zēniem no 2022. g. (2022. g. zēnu dati nav salīdzināmi – sākumgadā vakcinēja vairākus vecumus). PVO mērķis – 90 %.'}
 ];
-const EV=[[2002.1,'2002','Seksuālās un reproduktīvās veselības likums: valstij jānodrošina pamatzināšanas skolās'],[2005.7,'2005','"Veselības mācība" kā atsevišķs priekšmets pamatskolā beidzas; tēmas integrētas "Sociālajās zinībās"'],[2013.3,'2013','Valdības komiteja noraida VM priekšlikumu par obligātu veselības mācību'],[2015.5,'2015','"Tikumības grozījumi" – Izglītības likuma 10.¹ pants'],[2016.5,'2016','MK noteikumi Nr. 480 – materiālu izvērtēšana pēc tikumiskās audzināšanas prasībām'],[2020.7,'2020','Skola2030 ieviešana; vidusskolas izvēles kurss "Veselības mācība" izzūd'],[2023.7,'2023','VISC materiāls par seksuālo izglītību izņemts no aprites'],[2024.8,'2024','Valdība: skolotāju kurss par seksuālo un reproduktīvo veselību – tikai brīvprātīgs'],[2026.8,'2026','Valdība atbalsta "ģimenes vērtību un veselībpratības" moduli (līdz 30.04.2027)']];
+const EV=[[2002.1,'2002','Seksuālās un reproduktīvās veselības likums: valstij jānodrošina pamatzināšanas skolās'],[2005.7,'2005','"Veselības mācība" kā atsevišķs priekšmets pamatskolā beidzas; tēmas integrētas "Sociālajās zinībās"'],[2013.3,'2013','Valdības komiteja noraida VM priekšlikumu par obligātu veselības mācību'],[2015.5,'2015','"Tikumības grozījumi" – Izglītības likuma 10.¹ pants'],[2016.5,'2016','MK noteikumi Nr. 480 – materiālu izvērtēšana pēc tikumiskās audzināšanas prasībām'],[2020.7,'2020','Skola2030 ievieš pakāpeniski: 2020/21 – 1., 4., 7., 10. kl.; 2021/22 – 2., 5., 8., 11. kl.; 2022/23 – 3., 6., 9., 12. kl. Vidusskolas izvēles kurss "Veselības mācība" izzūd'],[2023.7,'2023','VISC materiāls par seksuālo izglītību izņemts no aprites'],[2024.8,'2024','Valdība: skolotāju kurss par seksuālo un reproduktīvo veselību – tikai brīvprātīgs'],[2026.8,'2026','Valdība atbalsta "ģimenes vērtību un veselībpratības" moduli (līdz 30.04.2027)']];
 const css=n=>getComputedStyle(document.documentElement).getPropertyValue(n).trim();
 const bands={id:'bands',beforeDatasetsDraw(ch){const{ctx,chartArea:a,scales:{x}}=ch;const P=[[1995,2005.7,css('--band1')],[2005.7,2020.7,css('--band2')],[2020.7,2027,css('--band3')]];ctx.save();P.forEach(([s,e,c])=>{const x1=Math.max(a.left,x.getPixelForValue(s)),x2=Math.min(a.right,x.getPixelForValue(e));ctx.fillStyle=c;ctx.fillRect(x1,a.top,x2-x1,a.bottom-a.top)});ctx.strokeStyle=css('--ink2');ctx.fillStyle=css('--ink2');ctx.font='11px system-ui,sans-serif';ctx.setLineDash([3,3]);EV.forEach(([v],i)=>{const px=x.getPixelForValue(v);ctx.globalAlpha=.6;ctx.beginPath();ctx.moveTo(px,a.top+14);ctx.lineTo(px,a.bottom);ctx.stroke();ctx.globalAlpha=1;ctx.fillText(String(i+1),px-3,a.top+10)});ctx.restore()}};
 let chart;
@@ -129,5 +183,42 @@ document.getElementById('evs').innerHTML=EV.map(([v,y,t],i)=>`<li><b>${i+1}. ${y
 let start=0;try{const s=parseInt(localStorage.getItem('indikators'));if(s>=0&&s<V.length)start=s}catch(e){}
 draw(start);
 </script>
+<script>
+const H={"HBSC_BULLIED|LV|F": {"2002": 19.2, "2006": 21.0, "2010": 18.0, "2014": 24.0, "2018": 25.0, "2022": 23.0}, "HBSC_BULLIED|LV|M": {"2002": 25.8, "2006": 29.0, "2010": 20.0, "2014": 26.0, "2018": 21.0, "2022": 20.0}, "HBSC_BULLIED|HBSC_avg|F": {"2002": 12.4, "2006": 13.0, "2010": 11.0, "2014": 11.0, "2018": 11.0, "2022": 12.0}, "HBSC_BULLIED|HBSC_avg|M": {"2002": 15.4, "2006": 15.0, "2010": 13.0, "2014": 13.0, "2018": 11.0, "2022": 12.0}, "HBSC_MULTICOMPL|LV|F": {"2002": 46.2, "2006": 50.0, "2010": 44.0, "2014": 55.0, "2018": 58.0, "2022": 72.0}, "HBSC_MULTICOMPL|LV|M": {"2002": 19.2, "2006": 25.0, "2010": 24.0, "2014": 29.0, "2018": 30.0, "2022": 37.0}, "HBSC_MULTICOMPL|HBSC_avg|F": {"2002": 43.5, "2006": 45.0, "2010": 44.0, "2014": 50.0, "2018": 52.0, "2022": 66.0}, "HBSC_MULTICOMPL|HBSC_avg|M": {"2002": 25.6, "2006": 28.0, "2010": 26.0, "2014": 28.0, "2018": 30.0, "2022": 36.0}, "HBSC_NERVOUS|LV|F": {"2014": 24.0, "2018": 29.0, "2022": 55.0}, "HBSC_NERVOUS|LV|M": {"2014": 15.0, "2018": 17.0, "2022": 21.0}, "HBSC_NERVOUS|HBSC_avg|F": {"2014": 28.0, "2018": 30.0, "2022": 45.0}, "HBSC_NERVOUS|HBSC_avg|M": {"2014": 17.0, "2018": 20.0, "2022": 23.0}, "HBSC_BREAKFAST_WD|LV|F": {"2002": 71.7, "2006": 59.0, "2010": 59.0, "2014": 56.0, "2018": 50.0, "2022": 39.0}, "HBSC_BREAKFAST_WD|LV|M": {"2002": 79.7, "2006": 66.0, "2010": 65.0, "2014": 65.0, "2018": 60.0, "2022": 60.0}, "HBSC_BREAKFAST_WD|HBSC_avg|F": {"2002": 57.4, "2006": 54.0, "2010": 57.0, "2014": 57.0, "2018": 53.0, "2022": 43.0}, "HBSC_BREAKFAST_WD|HBSC_avg|M": {"2002": 67.8, "2006": 65.0, "2010": 65.0, "2014": 65.0, "2018": 61.0, "2022": 56.0}, "HBSC_FRUIT_DLY|LV|F": {"2002": 24.0, "2006": 26.0, "2010": 26.0, "2014": 27.0, "2018": 26.0, "2022": 16.0}, "HBSC_FRUIT_DLY|LV|M": {"2002": 20.7, "2006": 15.0, "2010": 16.0, "2014": 19.0, "2018": 21.0, "2022": 19.0}, "HBSC_FRUIT_DLY|HBSC_avg|F": {"2002": 32.5, "2006": 34.0, "2010": 35.0, "2014": 37.0, "2018": 38.0, "2022": 34.0}, "HBSC_FRUIT_DLY|HBSC_avg|M": {"2002": 24.7, "2006": 25.0, "2010": 27.0, "2014": 29.0, "2018": 31.0, "2022": 32.0}, "HBSC_MVPA_DAILY|LV|F": {"2006": 16.0, "2010": 13.0, "2014": 14.0, "2018": 14.0, "2022": 12.0}, "HBSC_MVPA_DAILY|LV|M": {"2006": 26.0, "2010": 22.0, "2014": 21.0, "2018": 20.0, "2022": 20.0}, "HBSC_MVPA_DAILY|HBSC_avg|F": {"2006": 12.0, "2010": 10.0, "2014": 10.0, "2018": 11.0, "2022": 11.0}, "HBSC_MVPA_DAILY|HBSC_avg|M": {"2006": 20.0, "2010": 19.0, "2014": 21.0, "2018": 19.0, "2022": 21.0}, "HBSC_OWOB|LV|F": {"2014": 10.0, "2018": 13.0, "2022": 16.0}, "HBSC_OWOB|LV|M": {"2014": 19.0, "2018": 19.0, "2022": 23.0}, "HBSC_OWOB|HBSC_avg|F": {"2014": 13.0, "2018": 14.0, "2022": 15.0}, "HBSC_OWOB|HBSC_avg|M": {"2014": 22.0, "2018": 23.0, "2022": 24.0}, "HBSC_PSMU|LV|F": {"2018": 7.0, "2022": 10.0}, "HBSC_PSMU|LV|M": {"2018": 3.0, "2022": 3.0}, "HBSC_PSMU|HBSC_avg|F": {"2018": 10.0, "2022": 14.0}, "HBSC_PSMU|HBSC_avg|M": {"2018": 7.0, "2022": 8.0}, "HBSC_SRH_EXC|LV|F": {"2014": 10.0, "2018": 8.0, "2022": 8.0}, "HBSC_SRH_EXC|LV|M": {"2014": 23.0, "2018": 27.0, "2022": 23.0}, "HBSC_SRH_EXC|HBSC_avg|F": {"2014": 23.0, "2018": 25.0, "2022": 23.0}, "HBSC_SRH_EXC|HBSC_avg|M": {"2014": 38.0, "2018": 38.0, "2022": 40.0}, "HBSC_TOOTH2|LV|F": {"2002": 64.7, "2006": 68.0, "2010": 69.0, "2014": 63.0, "2018": 68.0}, "HBSC_TOOTH2|LV|M": {"2002": 40.9, "2006": 43.0, "2010": 40.0, "2014": 40.0, "2018": 41.0}, "HBSC_TOOTH2|HBSC_avg|F": {"2002": 73.2, "2006": 74.0, "2010": 75.0, "2014": 76.0, "2018": 74.0}, "HBSC_TOOTH2|HBSC_avg|M": {"2002": 52.4, "2006": 54.0, "2010": 55.0, "2014": 58.0, "2018": 55.0}, "HBSC_SLEEP_SUFF_SCHOOL|LV|F": {"2018": 33.0, "2022": 32.5}, "HBSC_SLEEP_SUFF_SCHOOL|LV|M": {"2018": 38.5, "2022": 40.7}, "HBSC_ECIG30|LV|F": {"2022": 31.0}, "HBSC_ECIG30|LV|M": {"2022": 25.0}, "HBSC_ECIG30|HBSC_avg|F": {"2022": 20.0}, "HBSC_ECIG30|HBSC_avg|M": {"2022": 18.0}, "HBSC_LONELY|LV|F": {"2022": 36.0}, "HBSC_LONELY|LV|M": {"2022": 20.0}, "HBSC_LONELY|HBSC_avg|F": {"2022": 28.0}, "HBSC_LONELY|HBSC_avg|M": {"2022": 13.0}, "COSI_OW|LV|F|7": {"2008": 18.9, "2010": 22.2, "2013": 21.0, "2016": 20.6, "2019": 22.5, "2023": 20.6}, "COSI_OW|LV|F|9": {"2016": 23.5, "2019": 24.4, "2023": 23.0}, "COSI_OW|LV|M|7": {"2008": 24.0, "2010": 24.5, "2013": 25.0, "2016": 24.8, "2019": 25.0, "2023": 22.7}, "COSI_OW|LV|M|9": {"2016": 30.5, "2019": 29.1, "2023": 29.9}, "COSI_OW|LV|T|7": {"2019": 23.8, "2023": 21.7}, "COSI_OW|LV|T|9": {"2019": 26.8}, "COSI_OW|COSI_avg|F|7-9": {"2017": 27.0, "2020": 28.0, "2024": 23.0}, "COSI_OW|COSI_avg|M|7-9": {"2017": 29.0, "2020": 31.0, "2024": 27.0}, "COSI_OW|COSI_avg|T|7-9": {"2020": 29.0, "2024": 25.0}, "COSI_OB|LV|F|7": {"2008": 4.6, "2010": 7.5, "2013": 7.0, "2016": 6.5, "2019": 7.8, "2023": 6.7}, "COSI_OB|LV|F|9": {"2016": 6.0, "2019": 5.5, "2023": 8.5}, "COSI_OB|LV|M|7": {"2008": 8.6, "2010": 10.8, "2013": 9.0, "2016": 8.8, "2019": 9.8, "2023": 10.6}, "COSI_OB|LV|M|9": {"2016": 10.5, "2019": 11.8, "2023": 14.8}, "COSI_OB|LV|T|7": {"2019": 8.8, "2023": 8.7}, "COSI_OB|LV|T|9": {"2023": 11.6}, "COSI_OB|COSI_avg|F|7-9": {"2017": 9.0, "2020": 10.0, "2024": 9.0}, "COSI_OB|COSI_avg|M|7-9": {"2017": 13.0, "2020": 14.0, "2024": 13.0}, "COSI_OB|COSI_avg|T|7-9": {"2020": 12.0, "2024": 11.0}, "GYTS_ECIG|LV|T": {"2011": 9.1, "2014": 10.0, "2019": 18.0, "2024": 21.9}};
+const V2=[
+{k:'Ņirgāšanās skolā (13 g.)',c:'HBSC_BULLIED',u:'% 13 g. skolēnu',n:'HBSC: cietuši no ņirgāšanās skolā vismaz 2–3 reizes mēnesī.'},
+{k:'Veselības sūdzības (15 g.)',c:'HBSC_MULTICOMPL',u:'% 15 g. skolēnu',n:'HBSC: ≥2 sūdzības (galvassāpes, nervozitāte, nomāktība, miega grūtības u.c.) vairāk nekā reizi nedēļā.'},
+{k:'Nervozitāte (13 g.)',c:'HBSC_NERVOUS',u:'% 13 g. skolēnu',n:'HBSC: jūtas nervozi vairāk nekā reizi nedēļā.'},
+{k:'Teicama veselība (15 g.)',c:'HBSC_SRH_EXC',u:'% 15 g. skolēnu',n:'HBSC: savu veselību vērtē kā teicamu.'},
+{k:'Brokastis skolas dienās (13 g.)',c:'HBSC_BREAKFAST_WD',u:'% 13 g. skolēnu',n:'HBSC: brokasto katru skolas dienu.'},
+{k:'Augļi katru dienu (15 g.)',c:'HBSC_FRUIT_DLY',u:'% 15 g. skolēnu',n:'HBSC: ēd augļus katru dienu.'},
+{k:'Fiziskā aktivitāte (15 g.)',c:'HBSC_MVPA_DAILY',u:'% 15 g. skolēnu',n:'HBSC: vismaz 60 min mērena līdz intensīva aktivitāte katru dienu (PVO ieteikums).'},
+{k:'Liekais svars (15 g.)',c:'HBSC_OWOB',u:'% 15 g. skolēnu',n:'HBSC: liekais svars vai aptaukošanās pēc pašu norādīta auguma un svara (PVO definīcija, salīdzināms no 2014).'},
+{k:'Liekais svars (9 g., mērīts)',c:'COSI',u:'% bērnu',n:'PVO COSI: mērīts svars un augums. Latvija – 9 g. bērni; vidējais – COSI valstu 7–9 g. bērni (aprēķināts dažādām valstu kopām).'},
+{k:'Zobu tīrīšana (15 g.)',c:'HBSC_TOOTH2',u:'% 15 g. skolēnu',n:'HBSC: tīra zobus vairāk nekā reizi dienā (starptautiski salīdzināmi dati līdz 2018).'},
+{k:'Problemātiska soc. tīklu lietošana (15 g.)',c:'HBSC_PSMU',u:'% 15 g. skolēnu',n:'HBSC: ≥6 no 9 atkarības pazīmēm sociālo tīklu lietošanā.'},
+{k:'E-cigaretes (13–15 g.)',c:'GYTS',u:'% 13–15 g. skolēnu',n:'GYTS: e-cigaretes lietotas pēdējās 30 dienās (tikai Latvija).'}
+];
+const FC='#eb6834',MC='#2a78d6';
+function ser(i){const v=V2[i];let out=[];
+ if(v.c==='COSI'){out=[['COSI_OW|LV|M|9','Latvija – zēni (9 g.)',MC,0],['COSI_OW|LV|F|9','Latvija – meitenes (9 g.)',FC,0],['COSI_OW|COSI_avg|M|7-9','COSI vidējais – zēni',MC,1],['COSI_OW|COSI_avg|F|7-9','COSI vidējais – meitenes',FC,1]];}
+ else if(v.c==='GYTS'){out=[['GYTS_ECIG|LV|T','Latvija',MC,0]];}
+ else{out=[['LV|F','Latvija – meitenes',FC,0],['LV|M','Latvija – zēni',MC,0],['HBSC_avg|F','HBSC vidējais – meitenes',FC,1],['HBSC_avg|M','HBSC vidējais – zēni',MC,1]].map(([g,l,c,d])=>[v.c+'|'+g,l,c,d]);}
+ return out.filter(a=>H[a[0]]);}
+let chart2;
+function draw2(i){
+ document.querySelectorAll('#pills2 .pill').forEach((p,j)=>{p.classList.toggle('on',j===i);p.setAttribute('aria-selected',j===i)});
+ const S=ser(i);
+ document.getElementById('legend2').innerHTML=S.map(([k,l,c,d])=>`<span><span style="width:16px;height:0;border-top:2px ${d?'dashed':'solid'} ${c}"></span>${l}</span>`).join('');
+ document.getElementById('note2').textContent=V2[i].n;
+ const ds=S.map(([k,l,c,d])=>({label:l,data:Object.entries(H[k]).map(([y,v])=>({x:+y,y:v})),borderColor:c,backgroundColor:c,borderWidth:2,borderDash:d?[5,4]:[],pointRadius:4,pointBorderColor:css('--surface'),pointBorderWidth:2,tension:0}));
+ if(chart2){chart2.data.datasets=ds;chart2.options.scales.y.title.text=V2[i].u;chart2.update();return}
+ const tick=css('--muted'),grid=css('--grid');
+ chart2=new Chart(document.getElementById('c2'),{type:'line',data:{datasets:ds},options:{responsive:true,maintainAspectRatio:false,animation:{duration:300},interaction:{mode:'nearest',intersect:false},plugins:{legend:{display:false},tooltip:{callbacks:{title:t=>String(t[0].parsed.x),label:t=>t.dataset.label+': '+t.parsed.y+' %'}}},scales:{x:{type:'linear',min:2001,max:2025,ticks:{stepSize:4,color:tick,callback:v=>String(v)},grid:{display:false}},y:{beginAtZero:true,ticks:{color:tick},grid:{color:grid},title:{display:true,text:V2[i].u,color:tick,font:{size:12}}}}}});
+}
+document.getElementById('pills2').innerHTML=V2.map((v,i)=>`<button class="pill" role="tab" onclick="draw2(${i})">${v.k}</button>`).join('');
+draw2(0);
+</script>
+
 </body>
 </html>
