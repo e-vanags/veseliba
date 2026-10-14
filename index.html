@@ -22,6 +22,11 @@ h1{font-size:26px;font-weight:600;margin:0 0 6px;line-height:1.25}
 h2{font-size:18px;font-weight:600;margin:32px 0 10px}
 p.lead{color:var(--ink2);margin:0 0 20px;max-width:780px}
 .card{background:var(--surface);border:1px solid var(--border);border-radius:12px;padding:16px}
+.lbl{font-size:12px;font-weight:600;color:var(--muted);margin-bottom:6px;text-transform:none}
+.gp{display:flex;flex-wrap:wrap;gap:6px}
+.dom{font:inherit;font-size:12px;padding:3px 9px;border:1px solid var(--border);border-radius:999px;background:transparent;color:var(--ink2);cursor:pointer}
+.dom:hover{border-color:var(--accent)}
+.dom.on{background:var(--accent);color:#fff;border-color:var(--accent)}
 .grp{display:grid;grid-template-columns:190px 1fr;gap:10px;align-items:start;padding:8px 0;border-bottom:1px solid var(--border)}
 .grp:last-child{border-bottom:0}
 .grp .gl{font-size:12px;font-weight:600;color:var(--ink2);padding-top:5px}
@@ -72,11 +77,15 @@ table.t th{font-weight:600;color:var(--ink2);font-size:13px}
 <h2>Rādītāji laikā un veselības izglītības posmi</h2>
 <p class="lead">Izvēlieties rādītāju. Fona krāsas rāda, kā veselības izglītība tika organizēta skolās; numurētās līnijas – galvenos politikas notikumus (sk. sarakstu zem grafika).</p>
 <div class="card">
-  <div id="ctl" style="display:flex;flex-wrap:wrap;gap:18px;align-items:center;margin:0 0 10px;font-size:13px;color:var(--ink2)">
+  <div class="lbl">Joma</div>
+  <div id="doms" class="gp"></div>
+  <div class="lbl" style="margin-top:10px">Rādītājs</div>
+  <div id="pills" class="gp"></div>
+  <div id="ctl" style="display:flex;flex-wrap:wrap;gap:18px;align-items:center;margin:12px 0 4px;font-size:13px;color:var(--ink2)">
     <span>Vecums: <button class="pill" data-age="11" onclick="setAge(11)">11 g.</button> <button class="pill" data-age="13" onclick="setAge(13)">13 g.</button> <button class="pill" data-age="15" onclick="setAge(15)">15 g.</button></span>
     <span>Salīdzināt ar: <button class="pill" data-cmp="HBSC_avg" onclick="setCmp('HBSC_avg')">HBSC vidējo</button> <button class="pill" data-cmp="vid7" onclick="setCmp('vid7')">7 valstu vidējo</button></span>
   </div>
-  <div id="pills"></div>
+  <h3 id="ctitle" style="font-size:16px;font-weight:600;margin:14px 0 2px"></h3>
   <div class="legend" id="legend"></div>
   <div class="chartbox"><canvas id="c" role="img" aria-label="Izvēlētā rādītāja laika rinda ar veselības izglītības posmiem un politikas notikumiem">Bērnu un pusaudžu veselības rādītāji Latvijā.</canvas></div>
   <div class="bands">
@@ -212,7 +221,10 @@ function ctl(){document.querySelectorAll('[data-age]').forEach(b=>b.classList.to
 function setAge(a){AGE=a;draw(cur)}
 function setCmp(c){CMP=c;draw(cur)}
 function draw(i){
-  cur=i;
+  cur=i;if(V[i].j!==DOM)DOM=V[i].j;renderDoms();renderPills();
+  const a=V[i].code?(V[i].o.ages.includes(AGE)?AGE:V[i].o.ages[V[i].o.ages.length-1]):null;
+  document.getElementById('ctitle').textContent=V[i].k+(a?' – '+a+' g.':'');
+  try{history.replaceState(null,'','#'+encodeURIComponent((V[i].code||'r'+i))+(V[i].code?'&v='+AGE+'&s='+CMP:''))}catch(e){}
   document.querySelectorAll('.pill[data-i]').forEach(p=>{const on=+p.dataset.i===i;p.classList.toggle('on',on);p.setAttribute('aria-pressed',on)});
   ctl();
   document.getElementById('legend').innerHTML=series(V[i]).map(({l,c,d})=>`<span><span style="width:16px;height:0;border-top:2px ${d?'dashed':'solid'} ${c}"></span>${l}</span>`).join('');
@@ -222,9 +234,13 @@ function draw(i){
   const tick=css('--muted'),grid=css('--grid');
   chart=new Chart(document.getElementById('c'),{type:'line',data:{datasets:ds(i)},plugins:[bands],options:{responsive:true,maintainAspectRatio:false,animation:{duration:300},interaction:{mode:'nearest',intersect:false},plugins:{legend:{display:false},tooltip:{callbacks:{title:t=>String(t[0].parsed.x),label:t=>t.dataset.label+': '+t.parsed.y}}},scales:{x:{type:'linear',min:1995,max:2027,ticks:{stepSize:5,color:tick,callback:v=>String(v)},grid:{display:false}},y:{beginAtZero:true,ticks:{color:tick},grid:{color:grid},title:{display:true,text:unit(V[i]),color:tick,font:{size:12}}}}}});
 }
-document.getElementById('pills').innerHTML=Object.entries(GN).map(([j,g])=>`<div class="grp"><span class="gl">${j}. ${g}</span><div class="gp">${V.map((v,i)=>v.j===+j?`<button class="pill" data-i="${i}" onclick="draw(${i})">${v.k}</button>`:'').join('')}</div></div>`).join('');
+let DOM=1;
+function renderDoms(){document.getElementById('doms').innerHTML=Object.entries(GN).map(([j,g])=>`<button class="dom${+j===DOM?' on':''}" onclick="pickDom(${j})">${j}. ${g}</button>`).join('')}
+function renderPills(){document.getElementById('pills').innerHTML=V.map((v,i)=>v.j===DOM?`<button class="pill${i===cur?' on':''}" data-i="${i}" onclick="draw(${i})">${v.k}</button>`:'').join('')}
+function pickDom(j){DOM=j;const f=V.findIndex(v=>v.j===j);draw(f)}
 document.getElementById('evs').innerHTML=EV.map(([v,y,t],i)=>`<li><b>${i+1}. ${y}</b><span>${t}</span></li>`).join('');
 let start=0;try{const s=parseInt(localStorage.getItem('indikators3'));if(s>=0&&s<V.length)start=s}catch(e){}
+try{const h=decodeURIComponent(location.hash.slice(1));if(h){const q=Object.fromEntries(h.split('&').slice(1).map(x=>x.split('=')));const id=h.split('&')[0];const f=id[0]==='r'&&/^r\d+$/.test(id)?+id.slice(1):V.findIndex(v=>v.code===id);if(f>=0)start=f;if(q.v)AGE=+q.v;if(q.s&&CMPN[q.s])CMP=q.s}}catch(e){}
 draw(start);
 </script>
 </body>
