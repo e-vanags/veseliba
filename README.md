@@ -13,6 +13,7 @@
 - `dati/veselibas_izglitibas_hronologija.md` – piezīmes par hronoloģiju.
 - `dati/berni_pusaudzi_veseliba.csv` – bērnu un pusaudžu veselības rādītāji (HBSC, COSI, ESPAD, GYTS, PISA, Eurostat), tajā pašā formātā.
 - `dati/berni_pusaudzi_veseliba.md` – definīcijas, avoti, iztrūkumi.
+- `dati/hbsc_lapai.csv` – harmonizēti HBSC rādītāji pēc SPKC 14 veselības jomām (2002–2022; 11, 13, 15 g.; meitenes/zēni/kopā; Latvija, HBSC vidējais, 7 valstu vidējais).
 - `dati/mutes_veseliba.csv`, `dati/mutes_veseliba.md` – skolēnu mutes veselība (SPKC, 2016 un 2023).
 - `dati/terminu_saskanosana.md` – lapā lietoto terminu atbilstība SPKC un CSP oficiālajiem terminiem.
 - `dati/stundu_skaits_veseliba.md` – veselības tēmām skolā atvēlētais laiks (MK noteikumi Nr. 747, VISC programmas paraugi).
@@ -32,6 +33,13 @@
 | Kariess, KPE indekss, sīlanti (12 un 15 g.) | SPKC mutes veselības pētījums | 2016, 2023 |
 | Lieka ķermeņa masa un aptaukošanās | HBSC; PVO COSI (mērīts) | 2002–2024 |
 | E-cigaretes, smēķēšana, alkohols, azartspēles, sociālie tīkli | HBSC, ESPAD, GYTS | 1995–2024 |
+
+## HBSC datu metode
+
+- 2002–2010: HBSC atvērtās piekļuves datnes (HBSC2001OAed1.0, HBSC2006OAed1.0, HBSC2010OAed1.0; HBSC Data Management Centre, University of Bergen). Publicēti tikai apkopojumi (valsts × gads × dzimums × vecums); individuālie dati netiek izplatīti.
+- 2014–2022: HBSC Data Browser (oficiālie apkopojumi). 2014 un 2018 pārbaudīti pret atvērtās piekļuves datnēm (HBSC2014OAed1.1, HBSC2018OAed1.1): korelācija 0,9998, vidējā starpība 0,26 procentpunkti.
+- HBSC vidējais – visu attiecīgajā gadā iesaistīto valstu nesvērtais vidējais; 7 valstu vidējais – Igaunija, Lietuva, Polija, Somija, Čehija, Ungārija, Vācija.
+- Termini – SPKC nacionālo HBSC ziņojumu termini (sk. `dati/terminu_saskanosana.md`).
 
 ## Ierobežojumi
 
