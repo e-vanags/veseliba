@@ -69,6 +69,24 @@ table.t th{font-weight:600;color:var(--ink2);font-size:13px}
 <p style="margin:0;font-size:14px;color:var(--ink2)"><strong>HBSC vidējais</strong> ir visu pētījumā piedalījušos valstu un reģionu rādītāju vidējā vērtība. Tas ļauj salīdzināt Latviju ar citām valstīm: ja Latvijas rādītājs ir ievērojami zemāks vai augstāks par vidējo, tas norāda uz problēmu, kas nav tikai vecumposma vai laikmeta iezīme. Līdzīgi <strong>COSI vidējais</strong> ir PVO bērnu aptaukošanās pētījuma (7–9 g.) valstu vidējais.</p>
 </div>
 
+<h2>Rādītāji laikā un veselības izglītības posmi</h2>
+<p class="lead">Izvēlieties rādītāju. Fona krāsas rāda, kā veselības izglītība tika organizēta skolās; numurētās līnijas – galvenos politikas notikumus (sk. sarakstu zem grafika).</p>
+<div class="card">
+  <div id="pills"></div>
+  <div class="legend" id="legend"></div>
+  <div class="chartbox"><canvas id="c" role="img" aria-label="Izvēlētā rādītāja laika rinda ar veselības izglītības posmiem un politikas notikumiem">Bērnu un pusaudžu veselības rādītāji Latvijā.</canvas></div>
+  <div class="bands">
+    <span><span class="sw" style="background:var(--band1)"></span>Atsevišķs priekšmets "Veselības mācība" (1995–2005)</span>
+    <span><span class="sw" style="background:var(--band2)"></span>Integrēta "Sociālajās zinībās" (2005–2020)</span>
+    <span><span class="sw" style="background:var(--band3a)"></span><span class="sw" style="background:var(--band3)"></span>Skola2030 – pakāpeniska ieviešana 2020/21–2022/23, pilnībā no 2023</span>
+  </div>
+  <p class="note" id="note"></p>
+</div>
+
+<h2>Politikas notikumi</h2>
+<ol class="ev" id="evs"></ol>
+
+
 <h2>Galvenās problēmas</h2>
 <p class="note" style="margin:-4px 0 10px">Skaitļi no HBSC 2021./22. g. aptaujas, ja kartītē nav norādīts cits avots vai gads. Salīdzinājumam norādīts HBSC vidējais.</p>
 <div class="kpis">
@@ -97,23 +115,6 @@ table.t th{font-weight:600;color:var(--ink2);font-size:13px}
   <div class="kpi"><div class="l">Bērnu ar sīlantiem (fisūru hermetizācija)</div><div class="v"><span><b>6–7 %</b><small>2016 un 2023</small></span></div><div class="s">nepieciešami ~64 % 12 g. un ~74 % 15 g. bērnu; netiek apmaksāti no valsts budžeta</div></div>
 </div>
 <p class="note">Avots: SPKC "Mutes veselības pētījums skolēniem Latvijā" (2015./16. un 2022./23. m. g.); Eiropas vidējais – Maldupa u.c., International Dental Journal, 2021.</p>
-
-<h2>Rādītāji laikā un veselības izglītības posmi</h2>
-<p class="lead">Izvēlieties rādītāju. Fona krāsas rāda, kā veselības izglītība tika organizēta skolās; numurētās līnijas – galvenos politikas notikumus (sk. sarakstu zem grafika).</p>
-<div class="card">
-  <div id="pills"></div>
-  <div class="legend" id="legend"></div>
-  <div class="chartbox"><canvas id="c" role="img" aria-label="Izvēlētā rādītāja laika rinda ar veselības izglītības posmiem un politikas notikumiem">Bērnu un pusaudžu veselības rādītāji Latvijā.</canvas></div>
-  <div class="bands">
-    <span><span class="sw" style="background:var(--band1)"></span>Atsevišķs priekšmets "Veselības mācība" (1995–2005)</span>
-    <span><span class="sw" style="background:var(--band2)"></span>Integrēta "Sociālajās zinībās" (2005–2020)</span>
-    <span><span class="sw" style="background:var(--band3a)"></span><span class="sw" style="background:var(--band3)"></span>Skola2030 – pakāpeniska ieviešana 2020/21–2022/23, pilnībā no 2023</span>
-  </div>
-  <p class="note" id="note"></p>
-</div>
-
-<h2>Politikas notikumi</h2>
-<ol class="ev" id="evs"></ol>
 
 <h2>Cik laika veselībai atvēlēts skolā</h2>
 <div class="card tw">
