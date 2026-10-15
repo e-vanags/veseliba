@@ -269,5 +269,7 @@ let start=0;try{const s=parseInt(localStorage.getItem('indikators3'));if(s>=0&&s
 try{const h=decodeURIComponent(location.hash.slice(1));if(h){const q=Object.fromEntries(h.split('&').slice(1).map(x=>x.split('=')));const id=h.split('&')[0];const f=id[0]==='r'&&/^r\d+$/.test(id)?+id.slice(1):V.findIndex(v=>v.code===id);if(f>=0)start=f;if(q.v)AGE=+q.v;if(q.s&&CMPN[q.s])CMP=q.s}}catch(e){}
 draw(start);
 </script>
+<script>window.goatcounter={path:function(p){return p.replace(/index\.html$/,"").replace(/\/$/,"")||"/";}};</script>
+<script data-goatcounter="https://slowscience.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
 </body>
 </html>
